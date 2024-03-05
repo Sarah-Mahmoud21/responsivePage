@@ -1,0 +1,76 @@
+header section {
+  background-color: lightgray;
+}
+header nav {
+  width: 100%;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: lightgray;
+}
+header nav #logo {
+  position: absolute;
+  margin: 5px;
+  left: 2%;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  float: left;
+}
+header nav ul li {
+  padding-right: 10px;
+}
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.bar {
+  display: flex;
+}
+.bar h2 {
+  margin: auto;
+}
+.bar #filters {
+  margin-bottom: 5px;
+  border: none;
+}
+.bar #filters:hover {
+  color: purple;
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  float: left;
+}
+.container #hide-show {
+  width: 300px;
+  height: 100%;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: none;
+}
+.container .pictures {
+  margin-top: 10px;
+}
+.container .pictures img {
+  width: 33%;
+}
+
+footer {
+  float: left;
+  width: 100%;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: lightgray;
+}
+footer ul {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */
