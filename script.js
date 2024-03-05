@@ -6,9 +6,9 @@ function toggleMenu() {
 
     if (computedStyle.display === 'none') {
         content.style.display = 'block';
-        button.innerText = 'Hide Menu';
+        button.innerHTML = '<i class="fas fa-bars"></i>' + ' Hide filters';
     } else {
         content.style.display = 'none';
-        button.innerText = 'Show Menu';
+        button.innerHTML = '<i class="fas fa-bars"></i>' + ' Show filters';
     }
 }
