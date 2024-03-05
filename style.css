@@ -1,4 +1,4 @@
-header section {
+header {
   background-color: lightgray;
 }
 header nav {
@@ -19,7 +19,6 @@ header nav #logo {
 header nav ul {
   list-style: none;
   display: flex;
-  float: left;
 }
 header nav ul li {
   padding-right: 10px;
@@ -63,7 +62,6 @@ header nav ul li a {
 }
 
 footer {
-  float: left;
   width: 100%;
   margin: 2px;
   display: flex;
