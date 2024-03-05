@@ -1,5 +1,5 @@
 function toggleMenu() {
-    let content = document.getElementById('hide-show');
+    let content = document.getElementsByClassName('boxes')[0];
     let button = document.getElementById('filters');
 
     let computedStyle = window.getComputedStyle(content);

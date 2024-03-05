@@ -9,11 +9,11 @@ header nav {
   align-content: center;
   background-color: lightgray;
 }
-header nav #logo {
+header nav h1 {
   position: absolute;
-  margin: 5px;
+  margin-top: 15px;
   left: 2%;
-  font-size: 30px;
+  font-size: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 header nav ul {
@@ -47,18 +47,23 @@ header nav ul li a {
   display: flex;
   float: left;
 }
-.container #hide-show {
-  width: 300px;
-  height: 100%;
-  margin-right: 10px;
-  margin-top: 10px;
+.container .boxes {
   display: none;
+  border: 2px solid black;
+  position: fixed;
+  width: 70%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  z-index: 2;
+  right: 0%;
 }
 .container .pictures {
   margin-top: 10px;
 }
 .container .pictures img {
-  width: 33%;
+  width: 46%;
+  margin: 1%;
 }
 
 footer {
@@ -71,4 +76,35 @@ footer {
 }
 footer ul {
   list-style: none;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container .boxes {
+    width: 50%;
+    right: 0%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container .boxes {
+    width: 50%;
+    right: 0%;
+  }
+  header nav h1 {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1023px) {
+  .container .boxes {
+    position: relative;
+    width: 300px;
+    border: none;
+  }
+  .container .pictures img {
+    width: 29%;
+    margin: 1%;
+  }
+  header nav h1 {
+    font-size: 20px;
+    margin: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -12,11 +12,11 @@ header{
     nav{     
         @include justify();
 
-        #logo{
+        h1{
             position: absolute;
-            margin:5px;
+            margin-top:15px;
             left:2%;
-            font-size: 30px;
+            font-size: 15px;
             font-family:Verdana, Geneva, Tahoma, sans-serif;    
         }
 
@@ -55,18 +55,24 @@ header{
     display: flex;
     float:left;
        
-    #hide-show{
-     width:300px;
+    .boxes{
+     display: none;
+     border:2px solid black;
+     position: fixed;
+     width:70%;
      height:100%;
-     margin-right:10px;
-     margin-top: 10px;
-     display:none;
+     background-color: rgba($color: #ffffff, $alpha: 0.5);
+     margin:10px;
+     z-index: 2;
+     right:0%;
     }
 
     .pictures{  
         margin-top: 10px; 
         img{
-           width:33%;
+        width: 46%; 
+        margin: 1%
+       
         }
     }
   }
@@ -78,3 +84,55 @@ footer{
         list-style: none;
     } 
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+   .container{
+    .boxes {     
+        width:50%;
+        right: 0%;
+     }
+   } 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) { // tablets
+    .container{
+     .boxes {     
+         width:50%;
+         right: 0%;
+      }
+    } 
+    header{
+        nav{
+            h1{
+                font-size: 15px;
+            }
+        }
+       }
+ }
+ @media only screen and (min-width: 1023px){
+    .container{
+
+        .boxes {   
+            position: relative;  
+            width:300px;
+            border:none;
+         }
+         .pictures{
+            img{
+                width:29%;
+                margin:1%;
+            }
+         }
+       } 
+       header{
+        nav{
+            h1{
+                font-size: 20px;
+                margin:10px;
+            }
+        }
+       }
+ }
+
+
+ 
