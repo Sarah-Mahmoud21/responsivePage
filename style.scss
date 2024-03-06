@@ -1,14 +1,17 @@
+@import 'variables';
+@import 'breakpoint';
+
 @mixin justify{
     width: 100%;
     margin:2px;
     display:flex;
     justify-content: center;
     align-content: center;
-    background-color: lightgray;
+    background-color: $lightGray;
 }
 
 header{
-    background-color:  lightgray;  
+    background-color:  $lightGray;  
     nav{     
         @include justify();
 
@@ -45,23 +48,23 @@ header{
         border: none;
         //background: none;  
         &:hover{
-            color:purple;
+            color:$buttonHoverColor;
         } 
     }
   }
 
   .container{ 
-    background-color: white;
+    background-color: $white;
     display: flex;
     float:left;
        
     .boxes{
      display: none;
      border:2px solid black;
-     position: fixed;
+     position: absolute;
      width:70%;
      height:100%;
-     background-color: rgba($color: #ffffff, $alpha: 0.5);
+     background-color: rgba($color: $white, $alpha: 0.5);
      margin:10px;
      z-index: 2;
      right:0%;
@@ -69,11 +72,36 @@ header{
 
     .pictures{  
         margin-top: 10px; 
-        img{
+        display: flex;
+       flex-wrap: wrap;  
+      justify-content: space-between;
+        
+        
+       figure{
+        box-sizing: border-box;
         width: 46%; 
-        margin: 1%
-       
-        }
+        margin: 1%;
+            img{
+                aspect-ratio:9/16;
+                width:100%;               
+            }
+            figcaption{
+                text-align: center;
+            }
+            button{
+                width:100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: black;
+                background:none;
+                border: 1px solid $lightGray;
+                &:hover{
+                    background-color: $buttonHoverColor;
+                }
+            }
+
+            
+            
+       } 
     }
   }
 
@@ -85,54 +113,44 @@ footer{
     } 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-   .container{
-    .boxes {     
-        width:50%;
-        right: 0%;
-     }
-   } 
-}
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) { // tablets
-    .container{
-     .boxes {     
-         width:50%;
-         right: 0%;
+@include breakpoint(medium) {
+    .container {
+      .boxes {     
+        width: 50%;
+        right: 0%;
       }
     } 
-    header{
-        nav{
-            h1{
-                font-size: 15px;
-            }
+    header {
+      nav {
+        h1 {
+          font-size: 15px;
         }
-       }
- }
- @media only screen and (min-width: 1023px){
-    .container{
-
-        .boxes {   
-            position: relative;  
-            width:300px;
-            border:none;
-         }
-         .pictures{
-            img{
-                width:29%;
-                margin:1%;
-            }
-         }
-       } 
-       header{
-        nav{
-            h1{
-                font-size: 20px;
-                margin:10px;
-            }
+      }
+    }
+  }
+  
+  @include breakpoint(large) {
+    .container {
+      .boxes {   
+        position: relative;  
+        width: 600px;
+        border: none;
+      }
+      .pictures {
+        figure {
+          width: 29%;
+          margin: 1%;
+          box-sizing: border-box;
+        } 
+      }
+    } 
+    header {
+      nav {
+        h1 {
+          font-size: 20px;
+          margin: 10px;
         }
-       }
- }
-
-
- 
+      }
+    }
+  }

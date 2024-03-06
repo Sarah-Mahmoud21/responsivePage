@@ -39,7 +39,7 @@ header nav ul li a {
   border: none;
 }
 .bar #filters:hover {
-  color: purple;
+  color: rgb(235, 200, 206);
 }
 
 .container {
@@ -50,7 +50,7 @@ header nav ul li a {
 .container .boxes {
   display: none;
   border: 2px solid black;
-  position: fixed;
+  position: absolute;
   width: 70%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
@@ -60,10 +60,31 @@ header nav ul li a {
 }
 .container .pictures {
   margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.container .pictures img {
+.container .pictures figure {
+  box-sizing: border-box;
   width: 46%;
   margin: 1%;
+}
+.container .pictures figure img {
+  aspect-ratio: 9/16;
+  width: 100%;
+}
+.container .pictures figure figcaption {
+  text-align: center;
+}
+.container .pictures figure button {
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  background: none;
+  border: 1px solid lightgray;
+}
+.container .pictures figure button:hover {
+  background-color: rgb(235, 200, 206);
 }
 
 footer {
@@ -78,13 +99,7 @@ footer ul {
   list-style: none;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .container .boxes {
-    width: 50%;
-    right: 0%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) {
   .container .boxes {
     width: 50%;
     right: 0%;
@@ -96,12 +111,13 @@ footer ul {
 @media only screen and (min-width: 1023px) {
   .container .boxes {
     position: relative;
-    width: 300px;
+    width: 600px;
     border: none;
   }
-  .container .pictures img {
+  .container .pictures figure {
     width: 29%;
     margin: 1%;
+    box-sizing: border-box;
   }
   header nav h1 {
     font-size: 20px;
