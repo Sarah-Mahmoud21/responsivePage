@@ -70,6 +70,8 @@ header nav ul li a {
   margin: 1%;
 }
 .container .pictures figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
   aspect-ratio: 9/16;
   width: 100%;
 }
