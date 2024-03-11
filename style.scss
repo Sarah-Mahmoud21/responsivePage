@@ -196,7 +196,6 @@ header{
     display:flex;
     width:100%;
     
-    
     p{
       display: inline;
       text-align: start;
@@ -319,6 +318,12 @@ footer{
     header {
       .filters-header{
         display:none
+      }
+      .fa-heart{
+        display: inline;
+      }
+      .fa-user{
+        display: inline;
       }
 
       nav {

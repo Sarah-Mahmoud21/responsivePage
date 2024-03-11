@@ -270,6 +270,12 @@ footer .bottom-footer li {
   header .filters-header {
     display: none;
   }
+  header .fa-heart {
+    display: inline;
+  }
+  header .fa-user {
+    display: inline;
+  }
   header nav h1 {
     position: absolute;
     font-size: 20px;
