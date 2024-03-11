@@ -229,6 +229,9 @@ footer .bottom-footer li {
   header nav h1 {
     font-size: 15px;
   }
+  .bar h2 {
+    margin: 10px;
+  }
 }
 @media only screen and (min-width: 1023px) {
   .refine {
@@ -239,6 +242,9 @@ footer .bottom-footer li {
   }
   .bar {
     display: flex;
+  }
+  .bar h2 {
+    margin: auto;
   }
   .bar #filters {
     margin-bottom: 5px;
