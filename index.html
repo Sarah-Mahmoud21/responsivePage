@@ -10,6 +10,9 @@
 </head>
 <body>
     <header>
+        <button class="filters-header" onclick="toggleMenu()"> 
+            <i class="fas fa-bars"></i> 
+        </button>
             <nav>   
                 <h1 id="logo">Club Monaco</h1>
                 <ul>
@@ -19,7 +22,21 @@
                     <li><a href="#">Sale</a></li>
                 </ul>
             </nav>
+            
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-bag"></i>
     </header>
+
+    <div class="sub-header">
+        Free shipping on orders of 550$ or more with code <strong > FREESHIP</strong> <a href="#"> see details</a>
+    </div>
+
+    <div class="sub-nav"> 
+        <a href="#">Women</a>/<a href="#"> Clothing </a>/<a href="#" > Dresses </a>
+    </div>
+
     <div class="bar">
         <button id="filters" onclick="toggleMenu()"> 
             <i class="fas fa-bars"></i> Show filters
@@ -28,9 +45,23 @@
         <h2>Dresses</h2>
     </div>
 
+    <p class="num-of-items">1-30 of 99 items  <a href=#> view all</a></p> 
+    <button class="refine">REFINE</button>
+
 <div class="container">    
-        <div class="boxes" id="hide-show">
-            Type
+        <div class="boxes">
+            <div class="top-box">
+            REFINE
+                 <button id="clear">CLEAR</button> 
+                <button id="done">DONE</button> 
+                <br>
+                <select name ="sort" id="sort">
+                    <option value="s">SORT BY</option>
+                   </select>
+                   <br>
+            </div>
+          
+           <span>TYPE<i class ="fas fa-minus"></i></span>
             <hr>
             <input type="checkbox" id="c1">
             <label for="c1">short</label><br>
@@ -38,33 +69,177 @@
             <label for="c2">maxi</label><br>
             <input type="checkbox"id="c3">
             <label for="c3">jumpsuit</label><br>
+            <hr>
+            <span> Size <i class ="fas fa-plus"></i></span>
+            <hr>
+            <span> Color <i class ="fas fa-plus"></i></span>
+            <hr>
+            <span> Price <i class ="fas fa-plus"></i></span>
+            <hr>
+            
         </div>
 
-    <div class="pictures">
+    <div class="pictures">       
        <!-- pictures genereted here-->
+       <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
         </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+        <div class="num"> 30 </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+        <div class="num"> 15 </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    <div class="custom-card">
+        <img src="https://i.pinimg.com/564x/03/d8/e4/03d8e4e4dc91af818d504e89b8bafa58.jpg" alt="Image 1">
+        <div class="card-description">
+            <p>Card 1 Description</p>
+        </div>
+    </div>
+    
+    
 
+    <!-- end-->
+        </div>
   </div>
 
+  <div class="lower-content">
+    <p class="items">1-30 of 99 items <a href=#>  view all</a></p> 
+    <button class="show-more"> Show More</button>
+    
+</div>
+<hr>
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis eligendi neque aliquam quis obcaecati eaque dolorem est odit sapiente nulla eveniet, voluptates maiores. Dolore id corporis molestias quia qui ea! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora repellendus, temporibus sit cupiditate, amet sed consequatur nostrum dolores itaque cumque facilis ab excepturi debitis fuga tempore. Sint ipsum quo magni?</p>
+<ul class="icons"> 
+    <li>#ClubMonaco</li>
+    <li><i class="fab fa-instagram"></i></li>
+    <li><i class="fab fa-facebook-f"></i></li>
+    <li><i class="fab fa-twitter"></i></li>
+    <li><i class="fab fa-pinterest"></i></li>
+</ul>
+
   <footer>
+    <div class="lists"> 
     <ul> 
         <li>support</li>
         <li>contact us</li>
         <li>FAQ</li>
         <li>0384673</li>
+        <li>gift cards</li>
+        <li>student discount</li>
     </ul>
     <ul> 
         <li>support</li>
         <li>contact us</li>
         <li>FAQ</li>
         <li>0384673</li>
+        <li>gift cards</li>
+        <li>student discount</li>
     </ul>
     <ul> 
         <li>support</li>
         <li>contact us</li>
         <li>FAQ</li>
         <li>0384673</li>
+        <li>gift cards</li>
+        <li>student discount</li>
     </ul>
+
+    <ul>
+        <li>let's keep in touch</li>
+        <li><input type="email" placeholder="Enter Email Address"> <input type="submit" name="submit"></li> 
+        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+    </ul>
+</div>
+    <ul class="bottom-footer">
+        <li> copy rights </li>
+        <li> privacy notice </li>
+        <li> terms of use </li>
+    </ul>
+
   </footer>
 </body>
 </html>
