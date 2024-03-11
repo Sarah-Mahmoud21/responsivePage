@@ -14,6 +14,8 @@ body #overlay {
 
 header {
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(243, 239, 239);
 }
 header .filters-header {
@@ -29,7 +31,7 @@ header .fas {
   margin: 10px;
   font-size: 20px;
 }
-header .fas .fa-heart {
+header .fa-heart {
   display: none;
 }
 header .fa-user {

@@ -40,6 +40,8 @@ body{
 
 header{
   display:flex;
+  align-items: center;
+  justify-content: center;
   background-color:  $lightGray; 
 
     .filters-header{
@@ -50,16 +52,15 @@ header{
       margin: 10px;
       font-size: 20px;
     }
-.fas{
+
   .fa-heart{ 
     display: none;
    }
-}
- 
 
  .fa-user{
   display: none;
  }
+
 
     nav{   
       @include justify();
