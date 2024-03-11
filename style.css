@@ -1,3 +1,17 @@
+body {
+  margin: 0px;
+}
+body #overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1;
+}
+
 header {
   display: flex;
   background-color: rgb(243, 239, 239);
@@ -15,7 +29,7 @@ header .fas {
   margin: 10px;
   font-size: 20px;
 }
-header .fa-heart {
+header .fas .fa-heart {
   display: none;
 }
 header .fa-user {
@@ -23,7 +37,6 @@ header .fa-user {
 }
 header nav {
   width: 100%;
-  margin: 2px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -155,13 +168,21 @@ header nav ul li a {
 .container .pictures .custom-card .card-description {
   text-align: center;
 }
+.container .pictures .custom-card .far {
+  position: relative;
+  top: -90%;
+  left: 85%;
+  font-size: 20px;
+  height: 5px;
+}
 .container .pictures .custom-card .num {
   position: relative;
   top: -65%;
-  left: 30%;
+  left: 35%;
   font-size: 100px;
   color: white;
-  height: 40px;
+  height: 2px;
+  width: 10px;
 }
 
 .lower-content {
@@ -194,6 +215,7 @@ header nav ul li a {
 }
 
 footer {
+  overflow-x: hidden;
   width: 100%;
   background-color: rgb(243, 239, 239);
 }
@@ -207,9 +229,10 @@ footer .lists ul {
 footer .lists ul input[type=submit] {
   background-color: black;
   color: white;
+  width: auto;
 }
 footer .lists ul input[type=email] {
-  width: 120px;
+  width: auto;
 }
 footer .bottom-footer {
   display: flex;
@@ -234,6 +257,9 @@ footer .bottom-footer li {
   }
 }
 @media only screen and (min-width: 1023px) {
+  body {
+    overflow-x: hidden;
+  }
   .refine {
     display: none;
   }
@@ -245,6 +271,7 @@ footer .bottom-footer li {
   }
   .bar h2 {
     margin: auto;
+    transform: translateX(-50%);
   }
   .bar #filters {
     margin-bottom: 5px;
@@ -272,6 +299,9 @@ footer .bottom-footer li {
   }
   .container .pictures .custom-card:nth-child(5n+5) {
     width: 46%;
+  }
+  .container .pictures .custom-card .far {
+    display: none;
   }
   header .filters-header {
     display: none;

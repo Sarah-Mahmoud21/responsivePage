@@ -3,7 +3,7 @@
 
 @mixin justify{
     width: 100%;
-    margin:2px;
+
     display:flex;
     justify-content: center;
     align-content: center;
@@ -24,6 +24,19 @@
     color:$buttonHoverColor;
   }
 }
+body{
+  margin: 0px;
+  #overlay {
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+}
 
 header{
   display:flex;
@@ -37,10 +50,12 @@ header{
       margin: 10px;
       font-size: 20px;
     }
-
- .fa-heart{ 
-  display: none;
- }
+.fas{
+  .fa-heart{ 
+    display: none;
+   }
+}
+ 
 
  .fa-user{
   display: none;
@@ -179,14 +194,22 @@ header{
             .card-description{
                 text-align: center;
             }
-            .num{
+            .far{
+              position: relative;
+              top:-90%;
+              left:85%;
+              font-size: 20px;
+             height:5px;
 
+            }
+            .num{
             position:relative;
             top:-65%;
-            left:30%;
+            left:35%;
             font-size: 100px;
             color:$white;
-            height:40px;
+            height:2px;
+            width:10px;
             }
        } 
     }
@@ -223,6 +246,7 @@ header{
   }
 
 footer{
+  overflow-x: hidden;
 
  width:100%;
  background-color:$lightGray;
@@ -234,10 +258,12 @@ footer{
       input[type="submit"]{
         background-color: black;
         color:white;
+        width:auto;
       }
       input[type="email"]{
-        width:120px;
+       width: auto;
       }
+      
   } 
   }
    
@@ -275,7 +301,9 @@ footer{
   }
   
   @include breakpoint(large) {
-
+    body{
+      overflow-x: hidden;
+    }
     .refine{
       display:none;
     }
@@ -285,7 +313,9 @@ footer{
     .bar{
       display:flex;
       h2{
-        margin: auto;
+       margin: auto;
+       transform: translateX(-50%);
+       
       }
       
       #filters{
@@ -319,6 +349,9 @@ footer{
             &:nth-child(#{$totalColumns}n + #{$i}) {
               width: $width;
             }
+          }
+          .far{
+            display: none;
           }
   }
 }
